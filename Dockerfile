@@ -1,3 +1,4 @@
 FROM node:6.4.0
 
 EXPOSE 80
+ENTRYPOINT node
