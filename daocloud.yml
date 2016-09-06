@@ -1,14 +1,17 @@
-image: daocloud/thunder/sample
-
-services:
-    - mongodb
-
-env:
-    - MONGODB_INSTANCE_NAME = "a7UJzoK5LOpvsZgj"
-
-install:
-    - npm install -g mocha
-
-script:
-    - npm install
-    - mocha
+version: "2.0"
+test:
+  image: daocloud.io/thunder/node-mongo-sample
+  services:
+  - mongodb
+  env:
+  - MONGODB_INSTANCE_NAME = "a7UJzoK5LOpvsZgj"
+  install:
+  - npm install -g mocha
+  script:
+  - npm install
+  - mocha
+build:
+  image:
+    dockerfile_path: /Dockerfile
+    build_dir: /
+    cache: true
