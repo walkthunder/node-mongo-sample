@@ -1,10 +1,10 @@
-image: daocloud/ci-node:0.8
+image: daocloud/thunder/sample
 
 services:
     - mongodb
 
 env:
-    - MONGODB_INSTANCE_NAME = "test"
+    - MONGODB_INSTANCE_NAME = "a7UJzoK5LOpvsZgj"
 
 install:
     - npm install -g mocha
